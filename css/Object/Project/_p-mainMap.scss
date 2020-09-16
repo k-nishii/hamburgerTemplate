@@ -1,0 +1,36 @@
+// メインコンテンツ（マップ部）
+.map-img {
+  background-image: url(../img/map.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 650px;
+  z-index: 0;
+
+  ::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.2);
+    @include absPosition(0, 0, 0, 0);
+    content: ' ';
+    z-index: -1;
+  }
+
+  .map-text{
+    background-color: rgba(0,0,0,0.5);
+    padding-top: $mapTitlePaddingTop;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: $mapFontColor;
+    width: 60%;
+    height: calc(100% - #{$mapTitlePaddingTop});
+  
+    >h3{
+      font-size: 2rem;
+      font-weight: normal;
+    }
+    >p{
+      padding-top: 20px;
+      color: $mapFontColor;
+    }
+  }
+}

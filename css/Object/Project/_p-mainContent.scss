@@ -1,0 +1,44 @@
+// メインコンテンツ（takeOut,eatIn部）
+.p-mainContents{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+  // イメージと内部のテキスト部
+  .p-content{
+
+    margin: 0 auto;
+    position:relative;
+
+    img{
+      width: 400px;
+      height: 500px;      
+    }
+
+    .contentTiele {
+      position:absolute;
+      top:20px;
+      font-size: 2.5rem;
+      padding-left: 10px;
+      color:$mainContentFontColor;
+    }
+    .contentSentense1{
+      @include contentSentense(50%);
+    }
+    .contentSentense2{
+      @include contentSentense(73.5%);
+    }
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .p-mainContents{
+    display: flex;
+    flex-direction: column ;
+
+    .p-content{
+      margin-bottom: 20px;
+    }  
+  }
+}

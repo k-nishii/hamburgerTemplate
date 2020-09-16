@@ -1,0 +1,40 @@
+/* メディアクエリ用 */
+$media_tablet: 1024px;
+$media_smartPhone: 896px;
+
+/* メインコンテンツ_全体 */
+$contentBkColor:#FFF7EF;
+$contentWidth:85%;
+$sideBarWidth:100%-$contentWidth;
+
+/* メインコンテンツ_検索部 */
+$searchTitleFontColor:#707070;
+$searchBorderColor:#707070;
+$searchBtnColor:#F2EDE9;
+
+/* メインコンテンツ_ダミーイメージ部 */
+$dummyImgFontColor:#fff;
+
+/* メインコンテンツ_takeOut,eatIn部 */
+$mainContentFontColor:#fff;
+
+/* メインコンテンツ_マップ部 */
+$mapTitlePaddingTop:100px;
+$mapFontColor:#fff;
+
+/* メインコンテンツ_サイドバー */
+$sideBarBackColor:#F2EDE9;
+$linkColor:#000;
+
+/* フッター */
+$footerBackColor:#9D8670;
+$footerFontColor:#fff;
+
+/* アーカイブのコンテンツ */
+$archiveMenuFontColor:#fff;
+$archiveMenuBtnColor:#707070;
+$archiveMenuBtnBkColor:#FFFFFF;
+$archiveMenuRightBkColor:#3C2B1C;
+
+/* シングルページのコンテンツ */
+$singleMenuFontColor:#fff;

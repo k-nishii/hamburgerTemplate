@@ -1,0 +1,92 @@
+//アーカイブページのコンテンツ部分
+.p-archiveContents{
+  margin: 40px 60px;
+
+  >h3{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  >p{
+    margin:20px 0;    
+  }
+
+  //アーカイブページのコンテンツ内のメニュー一覧
+  .p-archiveContentList{
+    display: flex;
+    flex-direction: column ;
+
+    //コンテンツ内の各メニュー(図+文章)の設定
+    .p-archiveContent{
+      display: flex;
+      @media screen and (max-width: $media_smartPhone) {
+        //スマホの場合、図と文章部は上下（スマホ以外は図と文章部は左右）
+        flex-direction: column ;
+      }
+      margin: 20px 0;
+
+      //メニューのイメージ部
+      img{
+        width: 50%;
+        //height: auto;
+        height: 400px;
+
+        @media screen and (max-width: $media_smartPhone) {
+          width: 100%;
+          max-height:350px;
+        }
+      }
+      
+      //メニューのイメージ右部の文章部
+      .p-imgRightPart{
+        background-color: $archiveMenuRightBkColor;
+
+        .p-imgRightPartSentense{
+          color: $archiveMenuFontColor;
+          margin-left: 20px;
+          margin-right: 20px;
+          
+          h4{
+            color: $archiveMenuFontColor;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 50px;
+          }
+  
+          h5{
+            margin-top: 50px;
+          }
+  
+          p{
+            margin-top: 20px;
+            margin-bottom: 90px;
+            @media screen and (max-width: $media_smartPhone) {
+              margin-bottom: 40px;
+            }
+          }
+  
+          a{
+            color:$archiveMenuBtnColor;
+            background-color:$archiveMenuBtnBkColor;
+            @media screen and (max-width: $media_smartPhone) {
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//詳細ボタン
+.p-contentButton{
+  display:block;          
+  width:50%;
+  margin: 0 auto;
+  text-align:center;
+  padding:20px;
+  font-size:15px;
+  font-weight:normal;
+  text-decoration:none;
+  border-radius:10px;
+}

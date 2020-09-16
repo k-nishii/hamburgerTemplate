@@ -1,0 +1,109 @@
+// メインコンテンツ（トップ検索部）
+.p-mainHead{
+ 
+  height: 15vh;
+  // タイトルと検索ボックスは両サイド
+  display: flex;
+  justify-content: space-between;
+  align-items: center; //要素を上下中央に配置
+  
+  //メニュー（通常非表示、タブレットサイズ以下のみ表示）
+  .headMenuLine{
+    display: none;
+  }
+
+  //検索部のタイトル
+  h1{
+    color: $searchTitleFontColor;
+    margin-left: 55px;
+    font-size: 2.5rem;
+    a{
+      text-decoration: none;
+      color: $searchTitleFontColor;
+    }
+  }
+  form{
+    margin-right: 20px;
+  }
+}
+
+// 検索部（検索入力のテキストボックスと検索ボタン）
+.p-searchForm{
+  display: flex;
+  justify-content: center;
+}
+
+//検索用のテキストボックス(虫眼鏡アイコン付き)
+.p-searchInputArea{
+
+  position:relative;
+  display: flex;
+
+  //テキストボックス
+  .searchText{
+    display: inline-block;
+    //height: 35px;
+    height: 35px;
+    width: 250px;
+    padding-inline-start: 30px;
+    margin-right: 5px;
+    border-radius:10px;
+    border-width: 1px;
+    border-color: $searchBorderColor;
+    outline: none;
+  } 
+  //テキストボックス内の虫眼鏡アイコン
+  .searchIcon{
+    position: absolute;
+    top:11px;
+    left: 10px;
+    z-index: 10;
+    border-width: 1px;
+    border-color: $searchBorderColor;
+  }
+}
+
+//検索ボタン
+.p-searchBtn{
+  width:100px;
+  height:35px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* 1024pxまでの幅の場合に適応される */
+  
+  // メインコンテンツ（トップ検索部）
+  .p-mainHead{
+   
+    display: block;
+    
+    height: 240px;
+    
+    // ページ上部のメニューボタン部分
+    .headMenuLine{
+      display: flex;
+      justify-content: flex-end;
+      //メニュー（通常非表示、タブレットサイズ以下のみ表示）
+      .headMenu{
+        display: inline-block;
+        margin-right: 20px;
+        padding-top: 20px;
+        font-size: 2.0rem;
+        color: $searchTitleFontColor;
+        font-weight: bold;
+      }  
+    }
+
+    //検索部のタイトル
+    h1{
+      line-height: 100px;
+      margin: 0 auto;
+      text-align:center;
+    }
+    form{
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+
+//アーカイブページ下部のページャー（PC、タブレット）
+.p-pager{
+  margin-top:20px;
+  margin-bottom:20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $media_smartPhone) {
+    display: none;
+  }
+
+  //ページ数部分
+  span{
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  //ページ番号ボタンの部分
+  .paggerBtn {
+    li{
+      display: inline;
+      padding:10px 15px;
+    }    
+    .line{
+      border:1px #ccc solid;color:#000053;
+      border-radius: 5px / 5px;  
+
+    }
+  }
+}
+
+//アーカイブページ下部のページャー（スマホ用）
+.p-pagerIphone{
+  display: none;
+
+  //スマホサイズの場合のみ表示
+  @media screen and (max-width: $media_smartPhone) {  
+    margin-top:10px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+  }
+}
+
+.pager{
+	text-align:center;
+}
+a.page-numbers,
+.pager .current{
+	background:rgba(0,0,0,0.02);
+	border:solid 1px rgba(0,0,0,0.1);
+	border-radius:5px;
+	padding:5px 8px;
+	margin:0 2px;
+}
+.pager .current{
+	background:rgba(0,0,0,1);
+	border:solid 1px rgba(0,0,0,1);
+	color:rgba(255,255,255,1);
+}

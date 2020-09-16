@@ -1,0 +1,15 @@
+// メインコンテンツ（ダミーサイトイメージ部）
+.p-headImg {
+  background-image: url(../img/head.png);
+  background-size: cover;
+  background-position: center;
+  //height: 300px;
+  height: 30vh;
+
+  >p{
+    margin-left: 55px;
+    line-height: 30vh;
+    font-size: 1.5rem;
+    color: $dummyImgFontColor;
+  }
+}

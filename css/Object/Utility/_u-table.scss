@@ -1,0 +1,26 @@
+//テーブルに関する定義
+
+table, td ,th {
+  border: 1px solid black;
+}
+
+table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  font-size: 30px;
+  width: 100%;
+}
+
+th{
+  font-weight: normal;
+  text-align: left;
+}
+
+td, th {
+  padding: 10px 20px;
+} 
+
+.single_table tr td:nth-child(1) {
+  width:30%;
+}

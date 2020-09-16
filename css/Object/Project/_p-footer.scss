@@ -1,0 +1,17 @@
+/*フッター
+--------------------------- */
+.p-footer {
+  background: $footerBackColor;
+  padding: 26px 0;
+  text-align: center;
+  color: $footerFontColor;
+
+  >a{
+    text-decoration: none;
+    color: $footerFontColor;
+  }
+  >p{
+    font-size: 0.875rem;
+    padding-top: 10px;
+  }
+}

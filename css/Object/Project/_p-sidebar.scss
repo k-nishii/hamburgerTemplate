@@ -1,0 +1,76 @@
+/*サイドバー
+--------------------------- */
+
+// サイドバー（PCサイズ）
+#sidebar {
+  font-size: 1.25rem;
+  width: 20%;
+  color: #000;
+  background:#F2EDE9;
+}
+
+.sidebar-wrapper {
+  padding-left: 20px; 
+  >h3{
+    margin: 40px 0;
+    font-size: 2.0rem;
+  }
+
+  & ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  & > ul > li {
+    position: relative;
+  }
+  & a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    transition: background-color .3s linear;
+  }  
+
+  & .sub-menu{
+    padding-left: 20px; 
+  }
+}
+
+#closeBtn{
+  display: none;
+}
+
+@media screen and (max-width: $media_tablet) {
+
+  #sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    color: #333;
+    background: #fff;
+    transition: .35s ease-in-out;
+  }
+
+  #closeBtn{
+    display: block;
+    font-size: 3.0rem;
+    text-align: right;
+  }
+
+  /* nav open */
+  .open {
+      overflow: hidden;
+  }
+  .open #sidebar  {
+      transform: translate3d(-300px,0,0);
+  }
+
+  #sidebar {
+      z-index: 300;
+  }
+}
+
+

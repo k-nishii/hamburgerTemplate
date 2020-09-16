@@ -1,0 +1,109 @@
+//シングルページのコンテンツ部分
+.p-singleContents{
+  margin: 40px 60px;
+
+  // 文字表示エリア
+  .p-singleSentensePart{
+    >h2{
+      font-size: 36px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    >p{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    >h3{
+      font-size: 28px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  
+    >h4,>h5,>h6{
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }  
+  }
+
+  //引用部分
+  .p-quote{
+    background-color: #F5F5F5;
+    padding:50px 60px;
+
+    .quotelink{
+      margin-top: 60px;
+    }
+  }
+
+  // 画像のみ中央横幅100%
+  .p-singleCenterWidth100Img {
+    background-image: url(../../img/head.png);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  // 画像およびテキストが1行に表示される部分
+  .p-singleImgAndText{
+    
+    margin-top: 50px;
+    margin-bottom:50px;
+    display: flex;
+
+    >img{
+      width: 50%;
+      height: 45vh;
+    }
+    >p{
+      margin-left: 20px;
+    }
+  }
+
+   // 画像のみ中央に表示される部分
+  .p-singleImgOnly{
+    @extend .p-singleImgAndText;
+    justify-content: center;
+  }
+
+  .p-singleMultiImg{
+    margin-top: 50px;
+    margin-bottom:50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    //タブレット用の配置設定
+    @media screen and (max-width: $media_tablet) {
+      justify-content: flex-start;
+    }
+    //スマホ用の配置設定
+    @media screen and (max-width: $media_smartPhone) {
+      justify-content: center;
+    }
+
+    img{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 30%;
+      //タブレット用の配置設定
+      @media screen and (max-width: $media_tablet) {
+        padding: 10px;
+        width: 45%;
+      }
+      //スマホ用の配置設定
+      @media screen and (max-width: $media_smartPhone) {
+        padding: 10px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+.p-singlePageBtn{
+  width:300px;
+  height:50px;
+}

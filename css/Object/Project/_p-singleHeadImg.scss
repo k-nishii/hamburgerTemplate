@@ -1,0 +1,13 @@
+// メインコンテンツ（ページ上部のイメージ部）
+.p-singleHeadImg  {
+  background-image: url(../../img/head.png);
+  background-position: center;
+  height:50vh;
+
+  >h1{
+    margin-left: 50px;
+    line-height: 50vh;
+    color:$singleMenuFontColor;
+    font-size: 4rem;
+  }
+}

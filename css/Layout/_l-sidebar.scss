@@ -1,0 +1,12 @@
+/*サイドバー
+--------------------------- */
+.l-sidebar{
+  width:$sideBarWidth;
+}
+
+@media screen and (max-width: $media_tablet) {
+  /* 1024pxまでの幅の場合に適応される */
+  .l-sidebar{
+    display: none;
+  }
+}

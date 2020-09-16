@@ -1,0 +1,15 @@
+// メインコンテンツの配置
+.l-main{
+  //コンテンツとサイドバーを横並び
+  display: flex;
+  justify-content: space-between;
+
+  article{
+    background-color: $contentBkColor;
+    width:$contentWidth;
+
+    @media screen and (max-width: $media_tablet){
+      width: 100%;        
+    }
+  }
+}
